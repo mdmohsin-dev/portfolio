@@ -10,67 +10,206 @@
 </head>
 
 <body>
-  <header>
+  <header class="header">
     <nav class="navbar">
-      <h2>MOHSIN</h2>
+      <div style="display: flex;align-items: center;gap: 10px;">
+        <img style="width: 55px; height: 55px; border-radius: 50%;" src="./src/images/me1.jpeg" alt="">
+        <h2 style="font-style: italic;">MOHSIN</h2>
+      </div>
       <div class="navbar-right">
         <ul>
-          <li><a href="">HOME</a></li>
-          <li><a href="">PROJECTS</a></li>
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#skills">SKILLS</a></li>
+          <li><a href="#projects">PROJECTS</a></li>
         </ul>
         <a class="btn" href="#contact">CONTACT
           ME</a>
       </div>
+      <div class="hidden-icon">
+        <button style="background-color: transparent; border: none;color: #FF014F;" class="menu-icon" id="menuIcon"><i
+            style="font-size: 30px;" class="fa-solid fa-bars"></i></button>
+      </div>
     </nav>
+
+
+    <div>
+      <div class="sidebar" id="sidebar">
+        <i style="font-size: 25px;" id="close-sidebar" class="fa-solid fa-x"></i>
+        <div style="margin-top: 30px;">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </header>
 
   <main>
-
     <!-- banner -->
-    <div class="container banner">
+    <div id="home" class="container banner">
       <div class="banner-content">
-        <div class="name-card">
-          <div
-            style="background-color:#EBBDCF; padding: 10px;border-radius: 50%;width: 60px;height: 60px;margin-bottom: 10px;">
+        <div>
+          <div class="user-icon">
             <img src="./src/images/user.png" style="background-color: #FF014F;padding: 5px;border-radius: 50%;" alt="">
           </div>
           <h2 style="font-size: 52px; font-weight:700;"><span style="color: #3C3E41">Hi, I'm</span> <span
               style="color: #FF014F;">Mohsin</span></h2>
           <h3 style="padding-top: 20px; font-size: 30px;color: #3C3E41">Frontend developer</h3>
           <div style="margin-top: 30px;">
-            <div style="display: flex;gap: 5px;">
-              <i class="fa-regular fa-file" style="color: #FF014F; font-size: 25px;"></i>
-              <p>Specializing in React, JavaScript and TailwindCSS.</p>
-            </div>
-            <div style="display: flex;gap: 5px; margin: 15px 0;">
-              <i class="fa-regular fa-envelope" style="color: #FF014F; font-size: 25px;"></i>
-              <a href="mailto:mdmohosin.web@gmail.com"
-                style="text-decoration: none;color: black;">mdmohosin.web@gmail.com</a>
-            </div>
-            <div style="display: flex;gap: 5px;">
-              <i class="fa-solid fa-location-dot" style="color: #FF014F; font-size: 25px;"></i>
-              <p>Dhaka, Bangladesh</p>
-            </div>
+            <p style="line-height: 1.8;">I am a junior web developer specializing in React, JavaScript, and TailwindCSS.
+              I build responsive and interactive web applications. I continuously build practical projects and learn
+              modern web technologies.</p>
           </div>
         </div>
 
-        <div style="margin-top: 10px;display: flex;gap: 20px;">
-          <a href="" class="btn">GET STARTED</a>
-          <a href="" class="btn">DOWNLOAD RESUME</a>
+        <div style="display: flex;">
+          <a href="#about" class="btn">About Me</a>
         </div>
       </div>
       <div class="banner-img">
         <img class="me" src="./src/images/me2.png" alt="">
       </div>
     </div>
-    <div class="divider"></div>
+    <!-- <div class="divider"></div> -->
+
+
+
+    <div id="about" class="container about-section">
+      <img class="about-img" src="./src/images/me4.jpeg" alt="">
+      <div>
+        <h3 style="font-size: 45px;padding-bottom: 20px;color: #3C3E41">Who I Am</h3>
+        <p style="line-height: 1.8;">I am a passionate web developer from Bangladesh. I enjoy building modern and
+          responsive websites using React and JavaScript. I focus on clean UI, good performance, and user-friendly
+          experiences. I am currently improving my skills by building practical projects and learning new technologies.
+        </p>
+        <div style="display: flex; margin-top: 30px;">
+          <a href="" class="btn">Download Resume</a>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div id="skills" class="container skill-section">
+      <h3 style="font-size: 50px;padding-bottom: 20px;color: #3C3E41; text-align: center;">My skills</h3>
+      <p style="text-align: center; padding-top: 8px; padding-bottom: 25px;">I have experience with these technologies
+      </p>
+      <div class="skills-cardContainer">
+        <div class="skillCard">
+          <img style="width: 50px;height: 50px;border-radius: 5px;" src="./src/images/react.png" alt="">
+          <p style="font-size: 18px;font-weight: 500;">React</p>
+        </div>
+        <div class="skillCard">
+          <img style="width: 50px;height: 50px;border-radius: 5px;" src="./src/images/js.jpg" alt="">
+          <p style="font-size: 18px;font-weight: 500;">Javascript</p>
+        </div>
+        <div class="skillCard">
+          <img style="width: 50px;height: 50px;border-radius: 5px;" src="./src/images/html.png" alt="">
+          <p style="font-size: 18px;font-weight: 500;">HTML</p>
+        </div>
+        <div class="skillCard">
+          <img style="width: 50px;height: 50px;border-radius: 5px;" src="./src/images/css.png" alt="">
+          <p style="font-size: 18px;font-weight: 500;">CSS</p>
+        </div>
+        <div class="skillCard">
+          <img style="width: 50px;height: 50px;border-radius: 5px;" src="./src/images/tailwind.png" alt="">
+          <p style="font-size: 18px;font-weight: 500;">CSS</p>
+        </div>
+        <div class="skillCard">
+          <img style="width: 50px;height: 50px;border-radius: 5px;" src="./src/images/github.jpeg" alt="">
+          <p style="font-size: 18px;font-weight: 500;">Github</p>
+        </div>
+        <div class="skillCard">
+          <img style="width: 50px;height: 50px;border-radius: 5px;" src="./src/images/git.png" alt="">
+          <p style="font-size: 18px;font-weight: 500;">Git</p>
+        </div>
+        <div class="skillCard">
+          <img style="width: 50px;height: 50px;border-radius: 5px;" src="./src/images/firebase.png" alt="">
+          <p style="font-size: 18px;font-weight: 500;">Git</p>
+        </div>
+        <div class="skillCard">
+          <img style="width: 50px;height: 50px;border-radius: 5px;" src="./src/images/nodejs.png" alt="">
+          <p style="font-size: 18px;font-weight: 500;">Git</p>
+        </div>
+        <div class="skillCard">
+          <img style="width: 50px;height: 50px;border-radius: 5px;" src="./src/images/daisyUI.png" alt="">
+          <p style="font-size: 18px;font-weight: 500;">DaisyUI</p>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div id="projects" class="container projects-section">
+      <h3 style="font-size: 50px;padding-bottom: 20px;color: #3C3E41; text-align: center;">Latest Projects</h3>
+      <div class="project-card-container">
+
+        <!-- card1 -->
+        <div class="project-card">
+          <img style="width: 100%; height: 260px; border-radius: 10px;" src="./src/images/boiPoka.png" alt="">
+          <div style="margin-top: 20px;">
+            <h2>Boi Poka</h2>
+            <p style="padding-top: 13px;">A React web app for browsing books, viewing details, and managing read list
+              and wishlist with sorting by
+              rating and total pages.</p>
+            <div style="display: flex;justify-content: space-between;margin-top: 25px;">
+              <a class="btn" href="https://boi-poka-roan.vercel.app/" target="_blank"
+                style="width: 60%;display: flex;justify-content: center;"><i
+                  class="fa-solid fa-arrow-up-right-from-square"></i> Live Link</a>
+              <a class="btn" href="https://github.com/mdmohsin-dev/boi-poka" target="_blank"><i
+                  class="fa-solid fa-code"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- card2 -->
+        <div class="project-card">
+          <img style="width: 100%; height: 260px; border-radius: 10px;" src="./src/images/bpl.png" alt="">
+          <div style="margin-top: 20px;">
+            <h2>BPL Dream 11</h2>
+            <p style="padding-top: 13px;">Fantasy cricket web app where users can claim coins and select players based
+              on their price.</p>
+            <div style="display: flex;justify-content: space-between;margin-top: 25px;">
+              <a class="btn" href="https://bpl-dream-11-delta.vercel.app/" target="_blank"
+                style="width: 60%;display: flex;justify-content: center;"><i
+                  class="fa-solid fa-arrow-up-right-from-square"></i> Live Link</a>
+              <a class="btn" href="https://github.com/mdmohsin-dev/BPL-dream-11" target="_blank"><i
+                  class="fa-solid fa-code"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- card3 -->
+        <div class="project-card">
+          <img style="width: 100%; height: 260px; border-radius: 10px;" src="./src/images/boiPoka.png" alt="">
+          <div style="margin-top: 20px;">
+            <h2>Boi Poka</h2>
+            <p style="padding-top: 13px;">A React web app for browsing books, viewing details, and managing read list
+              and wishlist with sorting by
+              rating and total pages.</p>
+            <div style="display: flex;justify-content: space-between;margin-top: 25px;">
+              <a class="btn" href="" style="width: 60%;display: flex;justify-content: center;"><i
+                  class="fa-solid fa-arrow-up-right-from-square"></i> Live Link</a>
+              <a class="btn" href=""><i class="fa-solid fa-code"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
     <!-- contact -->
-    <div id="contact" style="margin-top: 110px;" class="container">
-      <h3 style="font-size: 60px; font-weight: 700; text-align: center;color: #3C3E41">Contact With Me</h3>
+    <div id="contact" class="container contac-section">
+      <h3 style="font-size: 50px; font-weight: 700; text-align: center;color: #3C3E41">Contact With Me</h3>
 
-      <div style="display: flex;gap: 45px;margin-top: 40px;">
+      <div class="contac-me-section">
         <div class="contact-card">
           <div style="overflow: hidden;border-radius: 12px;width: 100%;max-height: 300px;">
             <img src="./src/images/contact1.png" alt="">
@@ -82,23 +221,22 @@
             user-friendly web applications.</p>
           <div style="margin-top: 20px;font-size: 18px;">
             <p>Phone: <a style="text-decoration: none;color: black;" href="tel:01682645400">+880168264540</a></p>
-            <p style="padding-top: 5px;">Email: <a style="text-decoration: none;color: black;"
-                href="mailto:mdmohosin.web@gmail.com">mdmohosin.web@gmail.com</a></p>
+            <p style="padding-top: 5px;">Location: Dhaka, Bangladesh</p>
           </div>
           <div style="margin-top: 25px;">
             <p>FIND WITH ME</p>
             <div style="margin-top: 19px;display: flex;gap: 15px;">
-              <a class="icon" href=""><i class="fa-brands fa-github"></i></a>
-              <a class="icon" href=""><i class="fa-brands fa-linkedin-in"></i></a>
-              <a class="icon" href=""><i class="fa-brands fa-instagram"></i></a>
+              <a class="icon" href="https://github.com/mdmohsin-dev" target="_blank"><i
+                  class="fa-brands fa-github"></i></a>
+              <a class="icon" href="https://www.linkedin.com/in/mdmohsin-dev/" target="_blank"><i
+                  class="fa-brands fa-linkedin-in"></i></a>
+              <a class="icon" href="mailto:mdmohosin.web@gmail.com"><i class="fa-regular fa-envelope"></i></a>
             </div>
           </div>
         </div>
-        <div style="width: 60%; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  background-color: #ecf0f3;padding: 25px;
-  border-radius: 12px;">
+        <div class="message-card">
           <form>
-            <div style="display: flex;gap: 25px;">
+            <div class="nameEmail-input">
               <div style="width: 100%;">
                 <label for="" style="font-size: 14px;">YOUR NAME</label>
                 <input type="text">
@@ -118,7 +256,8 @@
             </div>
             <div style="margin-top: 25px;">
               <label for="">YOUR MESSAGE</label>
-              <textarea style="resize: none;width: 100%;height: 210px;border: none;margin-top: 20px;border-radius: 8px;" name="
+              <textarea style="resize: none;width: 100%;height: 210px;border: none;margin-top: 20px;border-radius: 8px;"
+                name="
             " id=""></textarea>
             </div>
             <button class="btn" style="width: 100%;margin-top: 25px;padding: 20px 0;">SEND MESSAGE</button>
@@ -127,8 +266,29 @@
       </div>
 
     </div>
-    </div>
   </main>
+
+  <footer style="background-color: rgb(4, 3, 3); margin-top: 150px;">
+    <div class="container" style="display: flex; justify-content: space-between;align-items: center;padding: 60px 0;">
+      <div style="display: flex;align-items: center;gap: 10px;">
+        <img style="width: 55px; height: 55px; border-radius: 50%;" src="./src/images/me1.jpeg" alt="">
+        <h2 style="font-style: italic;color: white;">MOHSIN</h2>
+      </div>
+      <div style="margin-top: 19px;display: flex;gap: 15px;">
+        <a class="icon" href="https://github.com/mdmohsin-dev" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a class="icon" href="https://www.linkedin.com/in/mdmohsin-dev/" target="_blank"><i
+            class="fa-brands fa-linkedin-in"></i></a>
+        <a class="icon" href="mailto:mdmohosin.web@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+      </div>
+
+    </div>
+    <div class="divider"></div>
+    <p style="color: white; text-align: center; padding-top: 50px; padding-bottom: 25px;">© <span id="year"></span>
+      Mohsin. All rights reserved.</p>
+  </footer>
+
+
+  <script src="./src/main.js"></script>
 </body>
 
 </html>

@@ -6,12 +6,16 @@
   box-sizing: border-box;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
 body {
   background-color: #ECF0F3;
+}
+
+.hidden-icon {
+  display: none;
 }
 
 
@@ -20,8 +24,56 @@ body {
   color: white;
 }
 
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding-top: 10px;
+  background-color: #ECF0F3;
+}
+
+
+.sidebar {
+  position: fixed;
+  right: -290px;
+  top: 0;
+  width: 290px;
+  height: 100vh;
+  background-color: #0B1019;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+  transition: right 0.8s;
+  z-index: 100;
+  padding: 20px;
+  color: white;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+.sidebar ul {
+  list-style-type: none;
+}
+
+.sidebar li {
+  margin-bottom: 17px;
+  font-family: Inter;
+}
+
+.sidebar li a {
+  text-decoration: none;
+  color: white;
+}
+
+
+
 .container {
-  max-width: 1400px;
+  max-width: 1300px;
   width: 95%;
   margin: 0 auto;
   font-family: Montserrat;
@@ -31,9 +83,8 @@ body {
 .divider {
   border: none;
   border-top: 1px solid #ddd;
-  margin: 50px auto;
-  width: 1440px;
-  max-width: 95%;
+  margin:  auto;
+  width: 90%;
 }
 
 .navbar {
@@ -42,6 +93,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* border: 1px solid red; */
 }
 
 .btn {
@@ -55,7 +107,8 @@ body {
   border-radius: 6px;
   font-family: Montserrat;
   cursor: pointer;
-  transition: 0.5s;text-decoration: none;
+  transition: 0.5s;
+  text-decoration: none;
 }
 
 .btn:hover {
@@ -102,7 +155,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 70px;
+  padding-top: 180px;
+  padding-bottom: 100px;
 }
 
 .banner-content {
@@ -113,8 +167,8 @@ body {
 }
 
 .me {
-  width: 400px;
-  height: 410px;
+  width: 430px;
+  height: 440px;
   border-radius: 18px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   background-color: #EEF1F4;
@@ -157,15 +211,119 @@ body {
   transform: scale(1.1);
 }
 
-input{
-  border-radius: 7px;padding: 0 10px;font-size: 17px;
-  width: 100%; margin-top: 20px;width: 100%; height: 50px;border: none;margin-top: 10px;
+input {
+  border-radius: 7px;
+  padding: 0 10px;
+  font-size: 17px;
+  width: 100%;
+  margin-top: 20px;
+  width: 100%;
+  height: 50px;
+  border: none;
+  margin-top: 10px;
 }
 
-input:focus,textarea:focus{
+input:focus,
+textarea:focus {
   outline-color: #FF014F;
 }
 
+.contac-me-section {
+  display: flex;
+  gap: 45px;
+  margin-top: 40px;
+}
+
+.message-card {
+  width: 60%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: #ecf0f3;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.nameEmail-input {
+  display: flex;
+  gap: 25px;
+}
+
+.about-section {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  padding-top: 150px;
+}
+
+.project-card {
+  width: 100%;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.2);
+  background-color: #ecf0f3;
+  border-radius: 14px;
+  padding: 22px;
+  transition: 0.4s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+
+.skills-cardContainer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+}
+
+.skillCard {
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.2);
+  background-color: #e5eef1;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  padding: 20px 0;
+  border-radius: 8px;
+  transition: 0.4s;
+}
+
+.skillCard:hover {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
+}
+
+.user-icon {
+  background-color: #EBBDCF;
+  padding: 10px;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.about-img {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+}
+
+.project-card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+  margin-top: 40px;
+}
+
+
+
+
+.skill-section,
+.contac-section,
+.projects-section {
+  padding-top: 150px;
+}
 
 
 
@@ -178,8 +336,12 @@ input:focus,textarea:focus{
 }
 
 
+
 /* tablet */
 @media (max-width:770px) {
+  .hidden-icon {
+    display: block;
+  }
 
   .banner-content {
     width: 100%;
@@ -197,7 +359,20 @@ input:focus,textarea:focus{
   .me {
     width: 100%;
     height: 100%;
+  }
 
+  .nameEmail-input {
+    flex-direction: column;
+  }
+
+  .contac-me-section {
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .contact-card,
+  .message-card {
+    width: 100%;
   }
 }
 
